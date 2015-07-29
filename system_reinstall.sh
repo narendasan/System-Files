@@ -180,14 +180,6 @@ airmail(){
 }
 airmail()
 
-goofy(){
-    cd /Applications
-    curl https://dani.taurus.uberspace.de/goofyapp/download.php | unzip
-    rm -f Airmail_Beta.app.zip
-    cd
-}
-goofy()
-
 
 echo "alias ews=\"ssh -XC -c blowfish-cbc,arcfour sivagna2@remlnx.ews.illinois.edu\""
 echo "alias gg=\":(){ :|:& }:\""
