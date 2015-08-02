@@ -49,6 +49,8 @@ alias startApache="sudo launchctl load -w /System/Library/LaunchDaemons/org.apac
 source /etc/profile.d/autojump.sh
 export PATH="$PATH:$HOME/.rvm/bin:usr/local/bin:usr/bin" # Add RVM to PATH for scripting
 
+alias mount_efi="mkdir /Volumes/efi && sudo mount -t msdos /dev/disk0s1 /Volumes/efi"
+
 archey --color
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 alias julia="exec '/opt/homebrew-cask/Caskroom/julia/0.3.9/Julia-0.3.9.app/Contents/Resources/julia/bin/julia'"
