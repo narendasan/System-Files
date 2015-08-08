@@ -1,0 +1,3 @@
+vi ~/.profile
+source ~/.profile
+vi ~/.bash_profile 

@@ -1,0 +1,35 @@
+{
+  "name": "Pastel",
+  "theme": "syntax",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A dark pastel theme for the Atom editor ",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esundahl/atom-pastel"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# Pastel\n\nA dark theme with pastel colors.\n\n\n![Screenshot](https://raw.github.com/esundahl/atom-pastel/master/screenshot.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/esundahl/atom-pastel/issues"
+  },
+  "homepage": "https://github.com/esundahl/atom-pastel",
+  "_id": "Pastel@1.0.0",
+  "_shasum": "9c3935fbeb0de456058f8206e103965f512cf075",
+  "_resolved": "file:../d-115527-25355-1cukxkk/package.tgz",
+  "_from": "../d-115527-25355-1cukxkk/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

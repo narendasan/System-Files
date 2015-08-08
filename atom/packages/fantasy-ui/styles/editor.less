@@ -1,0 +1,33 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+atom-text-editor[mini] {
+  font-size: 13px;
+  max-height: 32px;
+}
+
+atom-text-editor[mini],
+atom-text-editor[mini]::shadow {
+  color: @text-color-highlight;
+  background-color: @input-background-color;
+  border: 2px solid @input-border-color;
+  border-radius: @component-border-radius;
+  padding-left: @component-padding;
+
+  .cursor { border-color: #fff; }
+  .selection .region { background-color: lighten(@input-background-color, 10%); }
+  .placeholder-text {
+    color: #585c68;
+  }
+}
+
+atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
+  border-color: lighten(@input-border-color, 3%);
+  .selection .region { background-color: desaturate(@background-color-info, 50%); }
+}
+
+atom-text-editor[mini]::shadow .cursor {
+  height: 15px !important;
+  top: 5px;
+  border-color: lighten(@input-border-color, 20%);
+}

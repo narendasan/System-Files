@@ -1,0 +1,34 @@
+{
+  "name": "fantasy-ui",
+  "theme": "ui",
+  "version": "2.1.1",
+  "description": "Default dark theme for interface components",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nijikokun/fantasy-ui"
+  },
+  "engines": {
+    "atom": ">0.40.0"
+  },
+  "readme": "# Fantasy UI\n\nClean, flat dark ui for Atom.\n\n\n```bash\n$ apm install fantasy-ui\n```\n\n![Screenshot](https://github.com/nijikokun/fantasy-ui/raw/master/screenshot-code.png)\n![Screenshot](https://github.com/nijikokun/fantasy-ui/raw/master/screenshot-dialog.png)\n![Screenshot](https://github.com/nijikokun/fantasy-ui/raw/master/screenshot-settings.png)\n\n**Syntax Themes that pair well**\n\n- Atom Dark\n- Seti Syntax\n- Ninja\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/nijikokun/fantasy-ui/issues"
+  },
+  "homepage": "https://github.com/nijikokun/fantasy-ui",
+  "_id": "fantasy-ui@2.1.1",
+  "_shasum": "3692d9608a16745c87650cddaadff3f95d7ee864",
+  "_resolved": "file:../d-115527-25207-16bjplj/package.tgz",
+  "_from": "../d-115527-25207-16bjplj/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

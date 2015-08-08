@@ -1,0 +1,92 @@
+// Colors
+
+@text-color: #898e9d;
+@text-color-subtle: #585c68;
+@text-color-highlight: #fff;
+@text-color-selected: @text-color-highlight;
+
+@text-color-info: #4dbce9;
+@text-color-success: #00e676;
+@text-color-warning: hsl(205, 70%, 55%);
+@text-color-error: #ff5460;
+
+@text-color-ignored: @text-color-subtle;
+@text-color-added: @text-color-success;
+@text-color-renamed: @text-color-info;
+@text-color-modified: @text-color-warning;
+@text-color-removed: @text-color-error;
+
+@background-color-info: #0098ff;
+@background-color-success: #00e676;
+@background-color-warning: #ffaa2c;
+@background-color-error: #ff5460;
+@background-color-highlight: rgba(255, 255, 255, 0.07);
+@background-color-selected: #4182C4;
+
+@app-background-color: #292931;
+
+@base-background-color: lighten(@tool-panel-background-color, 2%);
+@base-border-color: @app-background-color;
+
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: @app-background-color;
+
+@input-background-color: @app-background-color;
+@input-border-color: #363a47;
+
+@tool-panel-background-color: @app-background-color;
+@tool-panel-border-color: @base-border-color;
+
+@inset-panel-background-color: darken(@app-background-color, 2%);
+@inset-panel-border-color: @base-border-color;
+
+@panel-heading-background-color: #343742;
+@panel-heading-border-color: fadein(@base-border-color, 10%);
+
+@overlay-background-color: @app-background-color;
+@overlay-border-color: @background-color-highlight;
+
+@button-background-color: hsl(240, 9%, 23%);
+@button-background-color-hover: lighten(@button-background-color, 5%);
+@button-background-color-selected: lighten(@button-background-color, 8%);
+@button-border-color: @base-border-color;
+
+@tab-bar-background-color: @app-background-color;
+@tab-bar-border-color: darken(@tab-background-color-active, 10%);
+@tab-background-color: #333;
+@tab-background-color-active: #343742;
+@tab-border-color: #484848;
+
+@tree-view-background-color: @tool-panel-background-color;
+@tree-view-border-color: @tool-panel-border-color;
+@tree-view-color: @text-color;
+
+@scrollbar-background-color: @app-background-color;
+@scrollbar-color: #343742;
+
+@ui-site-color-1: @background-color-success; // green
+@ui-site-color-2: @background-color-info; // blue
+@ui-site-color-3: @background-color-warning; // orange
+@ui-site-color-4: #db2ff4; // purple
+@ui-site-color-5: #f5e11d; // yellow
+
+
+// Sizes
+
+@font-size: 11px;
+@input-font-size: 14px;
+
+@disclosure-arrow-size: 12px;
+
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+@component-border-radius: 2px;
+
+@tab-height: 30px;
+
+
+// Other
+
+@font-family: 'Lucida Grande', 'Segoe UI', sans-serif;

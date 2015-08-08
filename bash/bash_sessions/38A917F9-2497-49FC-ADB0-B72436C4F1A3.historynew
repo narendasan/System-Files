@@ -1,0 +1,8 @@
+cd Developer/
+ls
+vi ~/.profile
+source ~/.profile
+mount_efi
+git add ~/.profile
+git commit -m "efi mount command"
+git push origin master

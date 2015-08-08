@@ -1,0 +1,14 @@
+"*":
+  "exception-reporting":
+    userId: "37e2e8cf-b251-04da-e2bb-8fafd592d843"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+  editor:
+    invisibles: {}
+    tabLength: 4
+    fontSize: 12

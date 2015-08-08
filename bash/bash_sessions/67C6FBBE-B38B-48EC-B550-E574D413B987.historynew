@@ -1,0 +1,6 @@
+git pull
+git push origin master
+rm a
+rm bash_profile 
+ls
+mkdir /Volumes/ESP && sudo mount -t msdos /dev/disk0s1 /Volumes/ESP/

@@ -1,0 +1,96 @@
+@import "colors.less";
+
+.atom-text-editor,
+:host {
+    background-color: #152036;
+    color: @code-font-color;
+}
+
+.atom-text-editor,
+:host {
+    background-color: #1E2A44;
+    color: @code-font-color;
+
+    // LINE THAT DESIGNATES WHERE TEXT WILL WRAP
+    .wrap-guide {
+        background: @guides;
+    }
+
+    // LINE BETWEEN BRACKET INDENTATIONS
+    .indent-guide {
+        color: @guides;
+    }
+
+    .invisible-character {
+        color: @invisible;
+    }
+
+    .gutter {
+        background-color: @gutter-background;
+        color: @gutter-text;
+        padding: 0px;
+
+        .line-number {
+            &.foldable {
+                .icon-right {
+                    visibility: visible;
+                }
+            }
+
+            // SELECTED BLOCK
+            &.cursor-line {
+                background-color: @gutter-background-highlight;
+                color: @gutter-text-highlight;
+                font-weight: 100;
+            }
+
+            // CURRENT ACTIVE LINE
+            &.cursor-line-no-selection {
+                background-color: @gutter-background-highlight !important;
+                color: @gutter-text-highlight;
+            }
+        }
+
+        // HOVER STATE FOR LINE NUMBERS
+        .line-number:hover {
+            background-color: @gutter-background !important;
+            color: @gutter-text-highlight;
+        }
+    }
+
+    // LINE NUMBER FOR SECTIONS THAT HAVE BEEN COLLAPSED
+    .gutter .line-number.folded,
+    .gutter .line-number:after,
+    .fold-marker:after {
+        color: #FFF;
+        background: @gutter-text;
+    }
+
+    // INVISIBLE CHARACTES
+    .invisible {
+        color: @invisible;
+    }
+
+    // CURSOR COLOR
+    .cursor {
+        border-color: @cursor-color !important;
+        border-left: solid @cursor-width;
+    }
+
+    // BACKGROUND OF SELECTED TEXT
+    .selection .region {
+        background-color: @selected;
+        border: solid 1px @selected-border;
+    }
+
+    // ADD LEFT PADDING TO CODE VIEW
+    .scroll-view {
+        padding-left: 10px;
+    }
+
+    // SELECTED LINE STYLE
+    .line.cursor-line {
+        padding-left: 10px;
+        margin-left: -10px;
+    }
+}

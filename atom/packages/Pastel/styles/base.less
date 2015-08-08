@@ -1,0 +1,142 @@
+
+@import 'variables';
+
+atom-text-editor, :host {
+
+  background-color: @darkgray;
+  color: @purple;
+
+  .invisible-character,
+  .indent-guide {
+    color: @lightgray;
+  }
+
+  .gutter {
+    background: @darkgray;
+    color: @gray;
+  }
+
+  .is-focused .cursor {
+    border-color: @white;
+  }
+
+  .selection .region {
+    background-color: lighten(@darkgray, 10%);
+  }
+
+  .line-number.cursor-line, .atom-text-editor.is-focused .line.cursor-line {
+    background-color: lighten(@darkgray, 5%);
+    font-weight: bold;
+  }
+
+  .bracket-matcher .region {
+    background-color: #666;
+    opacity: 0.7;
+  }
+
+  .comment {
+    color: @lightgray;
+    font-style: italic;
+  }
+
+  .invalid.deprecated {
+    text-decoration: underline;
+    color: @red;
+  }
+
+  .string {
+    color: @orange;
+
+    .constant.character.escape {
+      color: @red;
+    }
+
+    &.regexp {
+      color: @orange;
+
+      .source.ruby.embedded,
+      .string.regexp.arbitrary-repitition {
+        color: @red;
+      }
+    }
+  }
+
+  .constant {
+    color: @orange;
+  }
+
+  .variable,
+  .variable.parameter,
+  .variable.other {
+    color: @yellow;
+  }
+
+  .entity {
+    color: @blue;
+  }
+
+  .entity.other.inherited-class {
+    font-style: italic;
+    color: @cyan;
+  }
+
+  .storage {
+    color: @green;
+  }
+
+}
+
+.keyword:not(.keyword.operator), .keyword.operator.logical {
+  color: @green;
+}
+
+.keyword { color: @green; }
+
+.support.type.exception {
+  color: @red;
+}
+
+.entity.other.attribute-name {
+  color: @orange;
+}
+
+.support.constant {
+  color: @red;
+}
+
+.support.type, .support.class {
+  color: @blue;
+}
+
+.support.other.variable {
+  color: @red;
+}
+
+.invalid {
+  color: #DDE6CF;
+  background-color: #5F0047;
+}
+
+.comment {
+  color: @lightgray;
+}
+
+.meta.function.section {
+  background-color: #371D28;
+}
+
+.markup.deleted {
+  color: @red;
+}
+
+.markup.inserted {
+  color: @green;
+}
+
+.markup.changed {
+  color: @blue;
+}
+
+.markdown-preview {
+  overflow-x: auto
+}

@@ -1,0 +1,46 @@
+{
+  "name": "linter-swiftc",
+  "activationCommands": [],
+  "main": "./lib/linter-swiftc",
+  "version": "2.0.0",
+  "description": "Lint Swift using swiftc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AtomLinter/linter-swiftc"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "linter-swiftc\n=========================\n\nThis linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to Swift's builtin syntax analysis. It will be used with files that have the `Swift` syntax.\n\n## Installation\nLinter package must be installed in order to use this plugin. If Linter is not installed, please follow the instructions [here](https://github.com/AtomLinter/Linter).\n\n### Plugin installation\n```\n$ apm install linter-swiftc\n```\n\n## Contributing\nIf you would like to contribute enhancements or fixes, please do the following:\n\n1. Fork the plugin repository.\n1. Hack on a separate topic branch created from the latest `master`.\n1. Commit and push the topic branch.\n1. Make a pull request.\n1. welcome to the club\n\nPlease note that modifications should follow these coding guidelines:\n\n- Indent is 2 spaces.\n- Code should pass coffeelint linter.\n- Vertical whitespace helps readability, don’t be afraid to use it.\n\nThank you for helping out!\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/AtomLinter/linter-swiftc/issues"
+  },
+  "homepage": "https://github.com/AtomLinter/linter-swiftc",
+  "_id": "linter-swiftc@2.0.0",
+  "_shasum": "43615ad183a540153f767f4002f215a283d068df",
+  "_resolved": "file:../d-115527-17605-1rggna5/package.tgz",
+  "_from": "../d-115527-17605-1rggna5/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/linter-swiftc.coffee",
+        "lib/provider.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

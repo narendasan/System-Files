@@ -1,0 +1,11 @@
+cd Developer/
+open atom groot-desktop-frontend/
+atom groot-desktop-frontend/
+kextunload /System/Library/Extensions/WavTap
+sudo kextunload /System/Library/Extensions/WavTap
+rm -rf /Applications/WavTap.app
+rm -rf /System/Library/Extensions/WavTap.kext
+sudo rm -rf /System/Library/Extensions/WavTap.kext
+rm -rf /Library/Receipts/WavTap*
+rm -rf /var/db/receipts/WavTap.
+rm -rf ~/Library/Services/WavTap.workflow

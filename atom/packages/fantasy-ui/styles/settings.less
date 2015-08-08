@@ -1,0 +1,212 @@
+.settings-view {
+  -webkit-font-smoothing: antialiased;
+
+  .panels {
+    background-color: darken(@app-background-color, 2%);
+    padding-top: 0;
+
+    .thumbnail {
+      background: @app-background-color;
+      border-color: transparent;
+
+      .caption {
+        color: @text-color-subtle;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+  }
+
+  .config-menu {
+    background-color: darken(@app-background-color, 2%);
+    box-shadow: none;
+    padding-top: 0;
+
+    -webkit-font-smoothing: antialiased;
+
+    .nav > li > a {
+      color: #898e9d;
+    }
+
+    .nav > li > a:hover {
+      background: transparent;
+      color: #FFF;
+      box-shadow: none;
+    }
+
+    .nav > li.active > a {
+      background-color: hsl(227, 12%, 18%);
+      color: #FFF;
+      font-weight: 600;
+    }
+
+    .panels-menu .panel-menu-separator {
+      border-bottom: 1px solid darken(@app-background-color, 3%);
+      margin: 10px;
+    }
+
+    .panels-packages li > a {
+      overflow: hidden;
+      background-color: hsl(207, 2%, 9%);
+    }
+
+    .btn-default,
+    .btn-group > .btn-default {
+      background: transparent;
+      color: hsl(210, 5%, 30%);
+      padding: 0px 3px;
+      border-color: hsla(0, 0%, 0%, 0);
+
+      &:hover {
+        background: transparent;
+        color: #FFF;
+      }
+    }
+  }
+
+  .search-container .btn-group .btn {
+    padding: 0px 12px;
+    line-height: 32px;
+    height: 32px;
+  }
+
+  section .section-heading:first-child,
+  .section .section-heading:first-child {
+    color: #FFF;
+    font-weight: 400;
+  }
+
+  .settings-panel label {
+    color: #898e9d;
+  }
+
+  .setting-description,
+  .packages .theme-description {
+    color: #585c68;
+  }
+
+  .editor-container atom-text-editor[mini],
+  .editor-container atom-text-editor[mini]i::shadow,
+  .editor-container atom-text-editor[mini].is-focused,
+  .editor-container atom-text-editor[mini].is-focused::shadow {
+    background: transparent;
+    border: 2px solid #363a47;
+    box-shadow: none;
+  }
+
+  select.form-control {
+    background: transparent;
+    border: 2px solid #363a47;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #898e9d;
+    -webkit-font-smoothing: antialiased;
+
+    &:disabled {
+      color: #585c68;
+      border-color: #343742;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+      background: transparent;
+      border-color: #898e9d;
+    }
+  }
+
+  .text {
+    color: hsl(207, 5%, 73%);
+  }
+
+  .control-group {
+    margin-bottom: 20px;
+  }
+
+  .btn-toolbar {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .alert-info {
+    background-color: transparent;
+    border-color: transparent;
+    color: #4dbce9;
+    padding: 15px 0;
+  }
+
+  .available-package-view {
+    margin-bottom: 0;
+    border-radius: 0;
+    border: 0;
+
+    background: transparent;
+    border-bottom: 2px solid #383c49;
+
+    &.disabled {
+      background-color: hsl(240, 9%, 19%);
+      margin-bottom: 2px;
+      border-bottom: 0;
+    }
+
+    .package-description {
+      color: hsl(225, 9%, 58%);
+    }
+
+    .meta {
+      margin-top: 10px;
+
+      .meta-user {
+        .avatar {
+          border-radius: 50%;
+        }
+
+        .author {
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+
+.scrollbars-visible-always {
+  .settings-view {
+    /deep/ ::-webkit-scrollbar {
+      width: 5px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track,
+    /deep/ ::-webkit-scrollbar-track,
+    /deep/ ::-webkit-scrollbar-corner {
+      background: @app-background-color !important;
+      box-shadow: none;
+    }
+
+    /deep/ ::-webkit-scrollbar-thumb {
+      background: lighten(@app-background-color, 8%);
+    }
+  }
+
+  .package-card,
+  .package-detail .package-card {
+    border: 1px solid hsl(240, 9%, 20%);
+    background-color: hsl(240, 9%, 20%);
+
+    &:hover {
+      border: 1px solid hsl(240, 9%, 20%);
+      background-color: hsl(240, 9%, 20%);
+    }
+
+    &.disabled {
+      border: 1px solid hsl(240, 9%, 18%);
+      background-color: hsl(240, 9%, 18%);
+      opacity: .8;
+    }
+  }
+
+  .package-readme {
+    font-size: @font-size;
+  }
+}

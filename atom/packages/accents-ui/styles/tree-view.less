@@ -1,0 +1,22 @@
+@import "ui-variables";
+
+.tree-view {
+    padding: 10px 0 0 10px;
+    font-size: @font-size;
+    background: @tree-view-background-color;
+
+    .entry:before {
+        background: transparent;
+    }
+
+    .file.selected .name {
+        color: @text-color-highlight;
+        font-weight: 500;
+    }
+}
+
+.tree-view-resizer {
+    .tree-view-resize-handle {
+        width: 8px;
+    }
+}

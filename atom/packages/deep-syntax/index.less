@@ -1,0 +1,343 @@
+/***************************************************************************************************
+    Atom Deep Theme - Syntax
+    Copyright (C) 2014 Lixquid
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+***************************************************************************************************/
+
+/* Configuration **********************************************************************************/
+
+@animation-speed: 1;
+
+/* Colors *****************************************************************************************/
+
+@grey: #9499a3;
+@red: #BA5454;
+@orange: #CC8966;
+@yellow: #ccaf3d;
+@green: #609E5A;
+@teal: #589B85;
+@blue: #5580AA;
+@purple: #A84C7A;
+
+@background-color: #202426;
+@text-color: #B0B4B6;
+
+/* Editor Styling *********************************************************************************/
+
+.editor-colors {
+    background-color: @background-color;
+    color: @text-color;
+}
+
+.editor {
+    background-color: @background-color;
+    color: @text-color;
+
+    // User Interface
+
+    .cursor {
+        color: #fff;
+        transition: opacity 300ms;
+    }
+
+    .line.cursor-line {
+        background: rgba( 0, 0, 0, 0.2 );
+        box-shadow: 2px 0 0 1px rgba( 0, 0, 0, 0.4 );
+    }
+
+    .selection .region {
+        background-color: darken( @background-color, 5% );
+
+        transition: all 50ms / @animation-speed;
+    }
+
+    .wrap-guide {
+        background: lighten( @background-color, 5% );
+    }
+
+    .fold-marker::after {
+        color: darken( @text-color, 40% );
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: all 100ms / @animation-speed;
+    }
+    .fold-marker:hover::after {
+        color: @text-color;
+    }
+
+    // Invisibles
+
+    .indent-guide, .invisible-character {
+        color: lighten( @background-color, 5% );
+    }
+
+    .invisible {
+        color: @text-color;
+    }
+
+    // Gutter
+
+    .gutter {
+        margin-right: 10px;
+        background-color: darken( @background-color, 2% );
+        border-right: 1px solid lighten( @background-color, 5% );
+
+        .line-numbers {
+            box-shadow: -22px 0 20px -20px rgba( 0, 0, 0, .4 ) inset;
+        }
+
+        .line-number {
+            color: darken( @text-color, 30% );
+            opacity: 1;
+            transition: all 50ms / @animation-speed;
+
+            &.cursor-line {
+                background-color: rgba( 0, 0, 0, .2 );
+                color: @text-color;
+                text-shadow: 0 0 1px @text-color;
+            }
+
+            &.folded {
+                box-shadow:
+                    0 1px 0 rgba( 255, 255, 255, .04 ),
+                    0 -1px 0 rgba( 0, 0, 0, .3 ) inset;
+            }
+
+            .icon-right {
+                color: darken( @text-color, 40% );
+                text-shadow: none;
+                transition: all 50ms / @animation-speed;
+
+                &:hover {
+                    color: darken( @text-color, 20% );
+                    text-shadow: 0 0 1px darken( @text-color, 20% );
+                }
+            }
+        }
+    }
+
+    .gutter .line-number {
+        &.git-line-added {
+            padding-left: ~"calc( .5em - 1px )";
+            border-left: 1px solid @green;
+        }
+        &.git-line-modified {
+            padding-left: ~"calc( .5em - 1px )";
+            border-left: 1px solid @yellow;
+        }
+        &.git-line-removed::before {
+            bottom: 0;
+            width: 6px;
+            height: 1px;
+            background: @red;
+            border: none;
+            box-shadow: 0 0 1px @red;
+        }
+    }
+
+}
+
+.bracket-matcher {
+    background: rgba( 255, 255, 255, 0.2 );
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba( 255, 255, 255, 0.3 );
+}
+
+/* Syntax Styling *********************************************************************************/
+
+.comment {
+    color: darken( @text-color, 40% );
+
+    text-shadow: 0 0 .2px darken( @text-color, 30% );
+
+    .invisible-character {
+        text-shadow: none;
+    }
+}
+
+.entity {
+    color: @blue;
+
+    &.name.function,
+    &.name.class,
+    &.name.type,
+    &.name.section {
+        color: lighten( @blue, 20% );
+    }
+
+    &.other.attribute-name {
+        color: mix( @teal, @blue );
+
+        &.id {
+            color: @blue;
+        }
+    }
+}
+
+.keyword {
+    color: @blue;
+
+    &.operator,
+    &.other.unit {
+        color: mix( @orange, @background-color, 60% );
+    }
+}
+
+.storage {
+    color: @blue;
+
+    &.type.class.todo {
+        color: @blue;
+    }
+    &.type.class.fixme {
+        color: @red;
+    }
+    &.type.class.changed {
+        color: @green
+    }
+    &.type.class.xxx {
+        color: @yellow
+    }
+}
+
+.constant {
+    color: @orange;
+
+    &.character.escape {
+        color: @yellow;
+    }
+    &.other.symbol {
+        color: @teal;
+    }
+}
+
+.variable {
+    color: @red;
+
+    &.parameter.function {
+        color: mix( @text-color, @red );
+    }
+}
+
+.string {
+    color: desaturate( @green, 20% );
+
+    &.regexp {
+        &, .begin, .end {
+            color: @teal;
+        }
+    }
+
+    &.other.link {
+        color: @teal;
+    }
+}
+
+.support {
+    color: mix( @orange, @text-color );
+
+    &.class {
+        color: @orange;
+    }
+
+    &.function {
+        color: @teal;
+
+        &.library {
+            color: darken( @blue, 15% );
+        }
+    }
+}
+
+.meta {
+    &.tag {
+        color: mix( @red, @text-color, 70% );
+    }
+}
+
+.invalid.illegal {
+    background-color: @red;
+    color: @background-color;
+    border-radius: 2px;
+}
+
+.none {
+    color: @text-color;
+}
+
+/* Markup/down styling ****************************************************************************/
+
+.markup, .gfm {
+
+    // Style
+    &.bold {
+        color: @teal;
+        font-weight: bold;
+    }
+    &.italic {
+        color: @teal;
+        font-style: italic;
+    }
+    &.strike {
+        color: @teal;
+        text-decoration: line-through;
+    }
+    &.link {
+        color: @teal;
+        text-decoration: underline;
+    }
+    &.issue,
+    &.mention,
+    &.username {
+        color: @teal;
+    }
+
+    // Constructs
+    &.list {
+        color: @red;
+    }
+    &.quote {
+        color: @red;
+
+        &.comment {
+            color: darken( @text-color, 30% );
+        }
+    }
+    &.hr {
+        text-decoration: line-through;
+    }
+    &.emoji {
+        color: @purple;
+    }
+
+    // Headings
+    &.heading-1 {
+        color: mix( @blue, @text-color, 100% );
+    }
+    &.heading-2 {
+        color: mix( @blue, @text-color, 85% );
+    }
+    &.heading-3 {
+        color: mix( @blue, @text-color, 70% );
+    }
+    &.heading-4 {
+        color: mix( @blue, @text-color, 55% );
+    }
+    &.heading-5 {
+        color: mix( @blue, @text-color, 40% );
+    }
+    &.heading-6 {
+        color: mix( @blue, @text-color, 25% );
+    }
+
+}
