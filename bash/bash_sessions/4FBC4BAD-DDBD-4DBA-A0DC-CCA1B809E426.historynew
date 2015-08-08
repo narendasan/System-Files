@@ -1,9 +1,0 @@
-ls
-brew install ext4fuse
-brew install fuse
-brew install fuse/ext4fuse
-brew install homebrew/fuse/ext4fuse
-mkdir /Volumes/efi
-sudo mount -t msdos /dev/disk0s1 /Volumes/efi
-diskutil list
-open /Volumes/efi/

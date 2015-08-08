@@ -1,8 +1,0 @@
- mv /Volumes/ESP/EFI/refind /Volumes/ESP/EFI/BOOT
-mv /Volumes/ESP/EFI/BOOT/refind_x64.efi /Volumes/ESP/EFI/BOOT/bootx64.efi
-Naren
-ls
-ruby 
-mkdir /Volumes/EFI
-mkdir /Volumes/ESP && sudo mount -t msdos /dev/disk0s1 /Volumes/ESP/
-bash
